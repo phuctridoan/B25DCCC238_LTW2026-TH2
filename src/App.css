@@ -1,0 +1,98 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f6fa;
+  color: #222;
+}
+.app-container { min-height: 100vh; }
+.navbar {
+  display: flex;
+  gap: 28px;
+  padding: 18px 7%;
+  background: #202938;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+.nav-link.active {
+  color: #ff9f43;
+  font-weight: 700;
+}
+.main-content {
+  max-width: 1100px;
+  margin: 32px auto;
+  padding: 28px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0,0,0,.07);
+}
+h1 { color: #253247; }
+.toolbar, .search-sort, .detail-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+}
+button {
+  border: 0;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  background: #e9edf3;
+  font-size: 14px;
+}
+button:hover { opacity: .88; }
+.filter-btn.selected {
+  color: white;
+  background: #f39c35;
+}
+select, input {
+  padding: 10px;
+  border: 1px solid #ccd2dc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.search-sort input { min-width: 280px; flex: 1; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+}
+th, td {
+  border: 1px solid #dce1e8;
+  padding: 12px;
+  text-align: left;
+}
+th { background: #eef1f5; }
+tbody tr:nth-child(even) { background: #fafbfc; }
+a { color: #1769aa; }
+.options-list { display: grid; gap: 12px; margin: 22px 0; }
+.option {
+  padding: 14px;
+  border: 1px solid #d8dde5;
+  border-radius: 7px;
+}
+.option.correct {
+  background: #d8f5df;
+  border-color: #55b86a;
+}
+.explain {
+  padding: 12px;
+  background: #f2f8ff;
+  border-left: 4px solid #3485d1;
+}
+.detail-actions button:first-child {
+  color: white;
+  background: #f39c35;
+}
+.secondary-btn { background: #e9edf3; }
+.error { color: #d93025; font-weight: 700; }
+@media (max-width: 650px) {
+  .navbar { gap: 14px; padding: 16px; flex-wrap: wrap; }
+  .main-content { margin: 14px; padding: 16px; }
+  .table-wrap { overflow-x: auto; }
+}
